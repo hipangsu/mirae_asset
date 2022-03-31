@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+hgroup,
+nav,
+section,
+summary {
+display: block;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+	
+	font-family: 'NanumSquare', sans-serif;
+	color: #000 ;
+	font-size: 1.6rem;
+	word-break: keep-all;
+	/* 
+	word-break   : 줄이 길어질 때 줄바꿈을 어떻게 할지 지정하는 속성 아시아, 비아시아 언어의 줄바꿈을 제어
+	- normal     : 기본값으로, 일반적인 규칙에 따라 줄바꿈 함
+	- break-all  : 문자를 강제로 줄바꿈 
+	- keep-all   : 문자 쌍 사이에서 줄바꿈이 금지
+
+	word-wrap    : 줄바꿈 속성, 비아시아 언어의 줄바꿈을 제어
+	- normal     : 기본값으로, 글자가 길어도 끊어지지 않고 한줄에 계속 표시
+	- break-word : 강제로 끊어서 줄바꿈 함
+
+	*CJK (chinese, japanese, korean) : 아시아 언어
+	*/
+	-webkit-font-smoothing: antialiased;
+	/* 
+	-webkit-font-smoothing : 브라우저에 표현되는 텍스트가 렌더링 될 때 부드럽게 표현되는 속성 
+			
+	* antialiased(앤티앨리어싱) = anti + aliased : 계단처럼 렌더링 되는 부분을 제거
+	*/
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;         
+	/*
+	-webkit-text-size-adjust : 모바일 폰트 크기 조정 
+	- none : default(기본값)속성으로 화면의 크기에 따라 크기를 조정하지 않는다.(기본값이지만 특정 디바이스의 경우엔 해당 값이 무시되어 렌더링 되는 경우가 있기 때문에 값을 넣어 적용시킨다.)
+	- auto : 화면의 크기에 따라 크기를 자동으로 조정할 수 있게 한다.
+	- % : 특정 퍼센트 값을 줘서 크기를 조정한다.
+
+	* -webkit-text-size-adjust : none;  크롬, 사파리, 오페라 신버전
+	* -ms-text-size-adjust : none;  IE 
+	* -moz-text-size-adjust : none; 파이어폭스
+	* -o-text-size-adjust : none;  오페라 구버전
+	*/
+	-webkit-overflow-scrolling: touch;
+	/* 
+	overflow-scrolling : 터치 단말기에서 주어진 요소의 스크롤 활성화 여부를 결정
+	- auto : 손가락을 터치 화면에서 떼는 순간 스크롤이 멈춤
+	- touch : 스크롤 제스쳐가 끝나고 손가락을 터치 화면에서 떼어도 잠시 스크롤이 지속(지속 속도와 시간은 스크롤 제스쳐의 세기에 따라 달라진다.)
+	*/
+	/*
+	-webkit-user-select: none;           
+	-khtml-user-select: none;               
+	-moz-user-select: none;                 
+	-ms-user-select: none;                  
+	user-select: none;
+	*/
+	/* 
+	user-select : 웹브라우저의 텍스트를 드래그하거나 더블 클릭으로 선택 가능 여부 지정
+	- auto : Default값으로 브라우저 허용시 텍스트 선택 가능
+	- all  : 더블클릭이 아닌 클릭 만으로도 선택이 가능
+	- none : 텍스트 선택 안됨
+	- text : 텍스트 선택이 가능(기본값이랑 동일하나 브라우저에 따라 차이가 있을 수 있어 text값이 필요)
+	*/
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	/*
+	모바일 화면에서 링크를 터치했을 때 나오는 기본 영역의 색상을 제어
+	- rgba(0,0,0,0)은 색이 없는 투명을 의미
+	- rgba() 값은 ios에서 동작하지 않으므로 transparent 값도 함께 넣어준다.
+	*/
+	scroll-behavior: smooth;
+	/* 
+	<a href="#"></a>로 이동되는 스크롤의 움직임이 부드러워진다.
+	*/
+	text-rendering: optimizeSpeed;
+	/* 
+	렌더링 엔진에 텍스트 렌더링시 최적화 할 정보를 제공한다.
+	- auto : 브라우저는 텍스트를 그리는 동안 속도, 판독성 및 기하학적 정밀도를 언제 최적화 할 것인지에 대해 숙련된 추측을 한다.
+	- optimizeSpeed : 가독성, 기하학적 정밀도 < 렌더링 속도
+	-optimizeLegibility : 렌더링 속도, 기하학적 정밀도 < 가독성
+	-geometricPrecision : 렌더링 속도, 가독성 < 기하학적 정밀도
+	*/
+	min-height: 100vh;
+	line-height: 1;
+  /* letter-spacing: -.5px; */
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	/*
+	outline과 inline을 어떻게 설정할 것인가를 결정하는 속성
+	ex) text에 underline을 긋게 될 경우 밑줄 기준 아래에 언어가 나올 경우(e,g,y,g,j) 생략할 것인가를 결정할 때 사용하는 옵션
+	*/
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+select[class],
+textarea[class] {
+	appearance: none;       
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	/* 
+	크로스 브라우징을 고려 할때 알아두면 좋음 (관련된 내용이 많으므로 필요할때 검색을 통해 알.아.보.자)
+	운영체제 및 브라우저에 기본적으로 설정되어 있는 모양들을 해제하거나 추가할 때 사용
+	ex) iOS의 폼 요소들에 부여되어 있는 둥근 테두리값이나 그림자 효과를 제거
+	ex) webit 계열의 브라우저의 type="search" 필드의 둥근 테두리 값이나 reset 효과를 나타내는 버튼을 삭제하는데 사용
+	ex) select 속성의 기본 화살표 모양을 삭제하거나 대체할때 사용
+	*/
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+select[class]::-ms-expand {
+	display: none;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	font: inherit;
+	cursor: pointer;
+	background: transparent;
+}
+
+/* 
+label {
+    cursor: pointer;
+}
+ */
+
+table {
+  width: 100%;
+  table-layout: fixed;
+	/* 테이블이 깨지는 현상 방지*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+	border-collapse: collapse;
+	font-weight: normal;
+}
+
+legend,
+.a11y-hidden,
+.hidden,
+.hide {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	color: transparent !important;
+	overflow: hidden !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+caption.a11y-hidden,
+caption.hidden,
+caption.hide
+ {
+	position: relative !important;
+}
+
+fieldset {
+	border : 0;
+}
+
+/*
+웹접근성을 위한 숨김 텍스트
+- position: absolute; : 레이아웃에 영향을 주지 않게 nomal flow에서 해당 아이템 영역을 없앤다.
+- width: 1px; height: 1px; : width, height값을 최소한의 크기로 조절한다.
+- margin: 0; : 화면에 안나오게 한다.
+- overflow: hidden; : overflow된 콘텐츠를 숨긴다.
+- clip-path : 지정된 클리핑 범위 바깥 부분을 숨겨주는 속성이다. 
+*/
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+			animation-duration: 0.01ms !important;      /* 애니메이션이 한 사이클을 완료하는데 걸리는 시간을 지정*/
+			animation-iteration-count: 1 !important;    /* 애니메이션이 몇 번 반복 될지 지정*/
+			transition-duration: 0.01ms !important;     /* transition이 끝날 때까지 걸리는 시간을 지정*/
+			scroll-behavior: auto !important;
+	}
+	/* 
+	애니메이션을 축소하거나 없애는 것을 원하는 사용자를 위해 운영체제에 애니메이션 동작 축소 기능을 제공
+	- 애니메이션 효과 사용 시 눈이 쉽게 피로해지는 사용자 및 저시력 사긱장애인 사용자
+	- 인식 장애를 가진 사용자 및 애니메이션으로 인한 광과민성 발작, 간질, 편두통 등이 발생할 수 있는 이용자
+	- 저사양(보급형) PC 및 모바일 기기 사용자
+	웹 페이지에서 운영 체제의 설정에 반응하여 애니메이션 동작을 축소해주는 prefers-reduced-motion 미디어 쿼리 속성을 제공
+	주로 창 확대/축소 동작과 같이 애니메이션 효과를 동반한 UI의 애니메이션 효과를 삭제하거나 단축시킨다.
+	*/
+}
