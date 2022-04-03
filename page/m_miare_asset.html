@@ -8,32 +8,65 @@
 
 	<link rel="stylesheet" href="../resources/css/ui.reset.css">
 	<link rel="stylesheet" href="../resources/css/ui.fonts.css">
-	<link rel="stylesheet" href="../resources/css/ui.style.css">
+	<link rel="stylesheet" href="../resources/css/m.ui.style.css">
 </head>
 <body>
 
 	<div class="base-wrap">
-		<div class="base-header"></div>
 
 		<div class="base-body">
 			<div class="body-header">
 				<div class="m-main-tit">
-					<div class="m-main-tit-container">
-						<img src="../resources/img/m_img/m_img_l_arrow.png" alt="뒤로가기 버튼" class="img1">
-						<h2 class="tit-h2">연금 한눈에</h2>
-						<img src="../resources/img/m_img/m_img_menu.png" alt="메뉴 버튼">
-					</div>
+					<img src="../resources/img/m_img/m_img_l_arrow.png" alt="뒤로가기 버튼" class="img1">
+					<h2 class="tit-h2">연금 한눈에</h2>
+					<img src="../resources/img/m_img/m_img_menu.png" alt="메뉴 버튼">
 				</div>
 			</div>
 
-			<main class="main-body">
+			<main class="m-main-body">
+
+				<!-- 연금포털 재조회 -->
+				<div class="m-popup-pension-info">
+					<div class="m-popup-header">
+						<P class="m-popup-txt">최근 조회일 이후 변경된 연금정보는 재조회를 통해 업데이트 됩니다.</P>
+						<button class="m-btn-popup"><span class="hide">통합 연금포털 재조회 정보 닫기 버튼</span></button>
+					</div>
+					<div class="m-refresh-box">
+						<button class="m-btn-refresh"><span class="m-icon-refresh"></span><span class=m-txt-refresh>통합연금포털 재조회</span></button>
+						<span class="m-refresh-annotation">최근 조회일 : 2020-06-12</span>
+					</div>
+				</div>
+
+				<!-- 월 예상연금수령액 -->
+				<div class="m-ex-reward">
+					<p class="m-ex-reward-txt1">만 60세 이후</p>
+					<p class="m-ex-reward-txt2 img-cash">월 예상연금수령액은</p>
+					<div class="m-amount">
+						<p class="m-amount-txt1">2,325,000<span class="m-price">원</span></p>
+						<button class="m-btn-view"><span class="m-view-txt">상세보기</span></button>
+					</div>
+					<div class="m-amount-guid">
+						<p class="m-amount-guid-txt1">희망하신 노후자금 대비 <span class="color-orange">월 28만원</span> 부족해요.</p>
+						<button class="m-guid-button"><span class="hide">링크 이동 버튼</span></button>
+					</div>
+					<div class="m-chk-amount" id="m-chk-amount">
+						<dl class="m-chk-amount-item">
+							<dt>총 적립금액(원)</dt>
+							<dd>21,375,902,300</dd>
+							<span class="m-amount-annotation">※ 통합연금포털에서 조회한  연금정보 합계</span>
+						</dl>
+						<dl class="m-chk-amount-item">
+							<dt>총 월납입액(원)</dt>
+							<dd>431,217,200</dd>
+						</dl> 
+					</div>
+				</div>
+
+				<hr class="line">
 
 			</main>
-
-			<div class="body-footer"></div>
 		</div>
 
-		<div class="base-footer"></div>
 	</div>
 	
 	<script src="../resources/js/custom.js"></script>
