@@ -1,49 +1,50 @@
 @charset "utf-8";
 
 .color-orange {
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #ff6600 !important;
 }
 
-/* 레이아웃 */
+.color-blue {
+  font-weight: 800 !important;
+  color: #2041bf !important;
+}
 
-.base-wrap {
+.mb-10 {
+  margin-bottom: 2rem !important;
+}
+
+/* 레이아웃 */
+.m-base-wrap {
   width: 100%;
-  max-width: 37.5rem;
+  /* max-width: 37.5rem; */
   min-width: 37.5rem;
   margin: 0 auto;
-  /* min-height: 100vh; */
-  background-color: antiquewhite;
+  background-color: #fff;
 }
 
-.base-wrap .base-body {
+.m-base-wrap .m-base-body {
   width: 100%;
-  /* padding: 1rem 0; */
-  padding: 1rem 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.base-wrap .base-header {
-
-}
-
-.base-wrap .m-main-body {
-
+.m-base-wrap .m-main-body {
+  padding: 0 2.5rem;
 }
 
 
 /* 연금 한눈에 */
-.body-header .m-main-tit {
+.m-body-header .m-main-tit {
   width: 100%;
   height: 11rem; 
-  /* background-color: #fff; */
-  background-color: aqua;
+  background-color: #fff;
   display:flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0 0 0;
+  padding: 1.5rem 2.5rem 0 2.5rem;
 }
 
-.body-header .m-main-tit .tit-h2 {
+.m-body-header .m-main-tit .tit-h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -51,11 +52,12 @@
 
 /* 연금포털 재조회 */
 .m-main-body .m-popup-pension-info {  
-  width: 100%;
+  position: relative;
+  left: -2.5rem;
+  width: calc(100% + 5rem);
   height: 15rem;
-  padding: 1.95rem 0;
-  /* background-color: #f2f2f2; */
-  background-color: #9fa8da ;
+  padding: 1.95rem 2.5rem;
+  background-color: #f2f2f2;
 }
 
 .m-main-body .m-popup-pension-info .m-popup-header {
@@ -73,7 +75,7 @@
   letter-spacing: .5px;
 }
 
-.m-main-body .m-popup-pension-info .m-popup-header .m-btn-popup { 
+.m-main-body .m-popup-pension-info .m-popup-header .m-btn-popup {
   background: url(../img/m_img/m_img_x_l.png) no-repeat;
   background-size: 100%;
   width: 1rem;
@@ -123,9 +125,9 @@
 /* 월 예상연금수령액 */
 .m-ex-reward {
   width: 100%;
-  height: 35rem;
-  background-color: #ef9a9a;
-  padding: 4rem 0 4.2rem 0rem;
+  height: 34.7rem;
+  background-color: #fff;
+  padding: 4rem 0 0rem 0rem;
 }
 
 .m-ex-reward .m-ex-reward-txt1 {
@@ -162,7 +164,6 @@
   margin-top: 2rem;
 }
 
-
 .m-ex-reward .m-amount .m-amount-txt1 {
   font-size: 4rem;
   font-weight: 800;
@@ -178,9 +179,9 @@
 }
 
 .m-ex-reward .m-amount .m-btn-view {
-  position: absolute;
-  right: 0rem;
-  bottom: 1.1rem;
+  position: relative;
+  left: 8.5rem;
+  bottom: 1.2rem;
   border-bottom: 1px solid #757575;
 }
 
@@ -244,26 +245,28 @@
 
 .m-ex-reward .m-chk-amount .m-chk-amount-item {
   position: relative;
+  width: 50%;
 }
 
 .m-ex-reward .m-chk-amount .m-chk-amount-item:first-child::before {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: .2rem;
+  top: -.5rem;
   width: .1rem;
   height: 5rem;
   background-color: #f5f5f5;
 }
 
 .m-ex-reward .m-chk-amount .m-chk-amount-item:nth-child(2) {
-  
+  padding-left: 1.3rem;
 }
 
 .m-ex-reward .m-chk-amount .m-chk-amount-item dt {
   font-size: 1.1rem;
   font-weight: 400;
   color: #757575;
+  letter-spacing: .5px;
 }
 
 .m-ex-reward .m-chk-amount .m-chk-amount-item dd {
@@ -278,12 +281,242 @@
   font-weight: 400;
   color: #757575;
   margin-top: 2rem;
+  width: 100%;
+  white-space: nowrap;
+  letter-spacing: .5px;
 }
 
 .line {
+  position: relative;
+  left: -2.5rem;
+  width: calc(100% + 5rem);
+  height: 1rem;;
+  background-color: #f5f5f5;
+  border: 0;
+  margin: 0;
+}
+
+
+/* 연금 준비 현황 */
+.m-prepare-status  .tit-h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 4.1rem 0 2rem 0;
+  letter-spacing: .2px;
+}
+
+.m-prepare-status .m-prepare-status-box {
   width: 100%;
-  height:1rem;
-  /* background-color: #f5f5f5; */
-  background-color: #000;
-  border :0;
+  height: 14.5rem;
+  /* border: .1rem solid #eee; */
+  border: 1px solid #000;
+  border-radius: .4rem;
+  background-color: #fff;
+  padding: 2.4rem 1.9rem ;
+  margin-bottom: 1rem;
+}
+
+.m-prepare-status .m-prepare-status-box .tit-h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: .2px;
+}
+
+.m-prepare-status .m-prepare-status-box .h3-txt {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: .2px;
+}
+
+.m-prepare-status .m-prepare-status-box .m-prepare-status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.m-prepare-status .m-prepare-status-box .m-prepare-status-item dt {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: .2px;
+  color: #757575;
+}
+
+.m-prepare-status .m-prepare-status-box .m-prepare-status-item dd {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.m-prepare-status .m-prepare-status-box .m-prepare-status-item dd.data {
+  font-size: 1.1rem !important;
+  font-weight: 400; 
+}
+
+.m-prepare-status .m-prepare-status-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.4rem;
+}
+
+.m-prepare-status .m-prepare-status-btn .base-dot {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #757575;
+  padding-left: .6rem;
+  line-height: 1.7rem;
+  letter-spacing: .5px;
+}
+
+.m-prepare-status .m-prepare-status-btn .base-dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .6rem;
+  width: .2rem;
+  height: .2rem;
+  background-color: #757575;
+}
+
+.m-prepare-status .m-prepare-status-btn .base-btn {
+  height: 3.5rem;
+  border: .1rem solid #bdbdbd;
+  border-radius: .4rem;
+  background-color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #424242;
+  padding: 1rem 1.4rem;
+  letter-spacing: -.5px;
+  white-space: nowrap;
+}
+
+/* 미래에셋 은퇴연구소 */
+.m-retire-box {
+  margin-top: 4rem;
+}
+
+.m-retire-box .m-retire-container {
+  width: 100%;
+  height: 7rem;
+  background-color: #f7f8ff;
+  border-radius: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-retire-box .m-retire-txt {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: .5px;
+  padding-right: .4rem;
+}
+
+.m-retire-box .m-retire-txt::before {
+  content: "";
+  position: absolute;
+  left: -3.1rem;
+  top: -.5rem;
+  background: url(../img/m_img/m_img_img.png) no-repeat;
+  background-size: 100%;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.m-retire-box .btn-retire {
+  position: relative;
+  left: 3.2rem;
+  width: .6rem;
+  height: 1rem;
+  background: url(../img/m_img/m_img_r_arrow_black.png) no-repeat;
+  background-size: 100%;
+}
+
+/* 노후자금계획 */
+.m-future-funds {
+  margin-top: 3.5rem;
+}
+
+.m-future-funds .m-future-funds-popup {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  background-color: #fff;
+  border: .1rem solid #ccc;
+  border-radius: .4rem;
+  padding: 1.9rem;
+}
+
+.m-future-funds .m-future-funds-popup::before {
+  content: "";
+  position: absolute;
+  left: 7.4rem;
+  bottom: -.6rem;
+  background-color: #fff;
+  border: .1rem solid #ccc;
+  border-right: 0;
+  border-bottom: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  transform: rotate(-135deg)
+}
+
+.m-future-funds .m-future-funds-popup::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url(../img/m_img/m_img_calculator.png) no-repeat;
+  background-size: 100%;
+  width: 10.1rem;
+  height: 5.4rem;
+}
+
+.m-future-funds .m-future-funds-popup .m-future-funds-txt {
+  font-size: 1.1rem; 
+  font-weight: 700;
+}
+
+.m-future-funds .m-future-funds-popup .btn-future-funds {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: url(../img/m_img/m_img_x_s.png) no-repeat;
+  background-size: 100%;
+  width: .7rem;
+  height: .7rem;
+}
+
+.m-future-funds .m-future-funds-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.7rem;
+  margin: 1.7rem auto 0 auto;
+}
+
+.m-future-funds .m-future-funds-btn .future-funds-btn {
+  width:15.9rem;
+  height: 5.5rem;
+  border: 0;
+  border-radius: .8rem;
+  background-color: #f2760a;
+  color: #fff;
+  font-size:1.5rem;
+  font-weight: 700;
+
+}
+
+.m-future-funds .m-future-funds-btn .future-funds-btn:first-child {
+  margin-right:.6rem;
+}
+
+.m-future-funds .m-future-funds-btn {
+  
 }
