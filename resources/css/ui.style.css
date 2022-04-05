@@ -517,6 +517,8 @@
   width: 1rem;
   height: 1rem;
   background: url(../img/pc_img/pc_img_x_s.png) no-repeat;
+  cursor: pointer;
+  z-index: 99;
 }
 
 .body-main .main-container .main-content .main-button-box {
@@ -996,7 +998,7 @@
     white-space: nowrap;
   }
 
-  
+
   /* 미래에셋 은퇴 연구소 */
   .body-main .main-container .retire-box {
     padding: 0 2.5rem;
