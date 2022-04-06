@@ -1,4 +1,5 @@
 
+// popup layer visibility,hidden
 const popUpLayer = {
   pensionBtn : null,
   futureFundsBtn : null,
@@ -32,3 +33,22 @@ const popUpLayer = {
 
 }
 popUpLayer.init();
+
+
+
+// scroll animation
+const saTriggerMargin = 200;
+const scrollAnimationList = document.querySelectorAll('.scroll_ani');
+
+const scrollAnimation = function() {
+  for (const element of scrollAnimationList) {
+    if (!element.classList.contains('show')) {
+      if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+        element.classList.add('show');
+      }
+    }
+  }
+}
+
+window.addEventListener('load', scrollAnimation);
+window.addEventListener('scroll', scrollAnimation);
