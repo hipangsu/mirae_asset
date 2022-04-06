@@ -12,7 +12,7 @@ const popUpLayer = {
   futureFundsPopupLayer : function() {
     const layer = document.getElementById('future_funds_popup_layer');
 
-    layer.style.display="none";
+    layer.style.visibility="hidden";
   },
 
   init : function() {
