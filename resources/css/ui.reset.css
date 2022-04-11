@@ -124,6 +124,7 @@ body {
 	/* 
 	<a href="#"></a>로 이동되는 스크롤의 움직임이 부드러워진다.
 	*/
+	
 	text-rendering: optimizeSpeed;
 	/* 
 	렌더링 엔진에 텍스트 렌더링시 최적화 할 정보를 제공한다.
@@ -248,6 +249,8 @@ fieldset {
 - overflow: hidden; : overflow된 콘텐츠를 숨긴다.
 - clip-path : 지정된 클리핑 범위 바깥 부분을 숨겨주는 속성이다. 
 */
+
+
 
 @media (prefers-reduced-motion: reduce) {
 	* {

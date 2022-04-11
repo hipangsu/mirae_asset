@@ -24,6 +24,7 @@
 .base-wrap {
   width: 100%;
   background-color: var(--white-);
+  overflow-x :hidden;
 }
 
 .base-wrap .base-header {
@@ -40,19 +41,22 @@
 
 .base-wrap .base-body {
   position: relative;
-  max-width: 128rem;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
+  max-width: 128rem;
+  margin: 0 auto;
 }
 
 .base-body .body-main {
-  width: 103rem;
+  width: 100%;
+  max-width: 103rem;
 }
 
 .base-body .body-aside {
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
   overflow: hidden;
 }
 
@@ -132,16 +136,15 @@
 }
 
 .refresh-box .btn-refresh {
-  width: 24.6rem;
-  height: 4rem;
-  border-radius: .4rem;
-  border: 1px solid var(--black-);
-  background-color: var(--white-);
-  margin-right: 1.7rem;
-  margin-left: .2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 24.6rem;
+  height: 4rem;
+  background-color: var(--white-);
+  border: 1px solid var(--black-);
+  border-radius: .4rem;
+  margin: 0 1.7rem 0 .2rem;
 }
 
 .refresh-box .btn-refresh .icon-refresh {
@@ -185,11 +188,11 @@
   position: relative;
   left: 0;
   top: 0;
-  padding-left: 4.5rem;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 2.8rem;
   letter-spacing: -.5px;
+  margin-bottom: 2.8rem;
+  padding-left: 4.5rem;
 }
 
 .body-main .main-container .ex-reward .ex-reward-txt2::before {
@@ -197,9 +200,9 @@
   position: absolute;
   left: .2rem;
   top: 0;
-  background: url(../img/pc_img/pc_img_cash.png) no-repeat;
   width:3.8rem;
   height: 2.8rem;
+  background: url(../img/pc_img/pc_img_cash.png) no-repeat;
 }
 
 .body-main .main-container .ex-reward .amount {
